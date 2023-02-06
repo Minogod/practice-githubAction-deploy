@@ -56,8 +56,8 @@ jobs:
 
       # CodeDeploy에게 배포 명령을 내립니다.
     - name: Code Deploy
-    run: >
-     aws deploy create-deployment --application-name be-20-minogod
-     --deployment-config-name CodeDeployDefault.AllAtOnce
-     --deployment-group-name be-20-minogod-group
-     --s3-location bucket=$S3_BUCKET_NAME,bundleType=zip,key=practice-deploy.zip
+      run: >
+       aws deploy create-deployment --application-name be-20-minogod
+       --deployment-config-name CodeDeployDefault.AllAtOnce
+       --deployment-group-name be-20-minogod-group
+       --s3-location bucket=$S3_BUCKET_NAME,bundleType=zip,key=practice-deploy.zip
